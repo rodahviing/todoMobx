@@ -1,0 +1,21 @@
+{
+  "name": "todo",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "mobx": "^5.6.0",
+    "mobx-react": "^5.4.2",
+    "react": "^16.6.3",
+    "react-app-rewire-mobx": "^1.0.9",
+    "react-app-rewired": "^1.6.2",
+    "react-dom": "^16.6.3",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "1.x"
+  },
+  "scripts": {
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test --env=jsdom",
+    "eject": "react-app-rewired eject"
+  }
+}
