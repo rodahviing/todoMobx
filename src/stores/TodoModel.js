@@ -15,6 +15,7 @@ class TodoModel {
   @action
   toggle() {
     this.completed = !this.completed;
+    this.completed ? this.store.count-- : this.store.count++;
   }
 
   // @action

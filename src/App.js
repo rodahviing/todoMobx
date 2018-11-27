@@ -4,6 +4,7 @@ import { observer } from "mobx-react";
 
 import TodoEntry from "./components/TodoEntry";
 import TodoItems from "./components/TodoItems";
+import TodoStore from "./stores/TodoStore";
 import "./App.css";
 
 @observer
@@ -30,7 +31,7 @@ class App extends Component {
         <footer class="footer">
           {/* <!-- This should be `0 items left` by default --> */}
           <span class="todo-count">
-            <strong>0</strong> item left
+            <strong>{TodoStore.count}</strong> item left
           </span>
           {/* <!-- Remove this if you don't implement routing --> */}
           <ul class="filters">

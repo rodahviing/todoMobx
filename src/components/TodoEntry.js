@@ -17,6 +17,10 @@ class TodoEntry extends Component {
     })
   }
 
+  getCount = () => {
+    return todoStore.count;
+  }
+
   render() {
     return (
       <header className="header">
