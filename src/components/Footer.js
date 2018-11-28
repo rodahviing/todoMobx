@@ -25,7 +25,7 @@ class Footer extends Component {
     };
 
     render() {
-        if (TodoStore.todos.filter(todo => todo.completed === false).length > 0) {
+        if (TodoStore.todos.filter(todo => todo.completed === false).length >= 0) {
             return (
                 <footer className="footer">
                     <span className="todo-count">
