@@ -6,16 +6,13 @@ import todoStore from '../stores/TodoStore'
 @observer
 class TodoItem extends Component {
 
-  onToggle = () => {
-    this.props.todo.toggle()
-  }
+    onToggle = () => {
+        this.props.todo.toggle()
+    };
 
-  onDestroy = (e) =>{
-    // console.log(e.target.id);
-    todoStore.removeTodo(e.target.id)
-    // this.props.todo.updateId()
-    
-  }
+    onDestroy = (e) => {
+        todoStore.removeTodo(e.target.id);
+    };
 
   render() {
     const {todo} = this.props
@@ -27,7 +24,7 @@ class TodoItem extends Component {
             type="checkbox"
             className="toggle"
             value="on"
-            defaultChecked={todo.completed}
+            checked={todo.completed}
           />
           <label>{todo.title}</label>
           <button id={todo.id}

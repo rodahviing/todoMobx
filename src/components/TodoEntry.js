@@ -2,24 +2,24 @@ import React, { Component } from "react";
 import todoStore from '../stores/TodoStore'
 
 class TodoEntry extends Component {
-  state = {
-    value: ""
-  }
+    state = {
+        value: ""
+    };
 
-  handleKeyDonw = event => {
-    if(event.keyCode !==13 || this.state.value === ''){
-      return;
-    }
-    event.preventDefault()
-    todoStore.addTodo(this.state.value)
-    this.setState({
-      value:''
-    })
-  }
+    handleKeyDown = event => {
+        if (event.keyCode !== 13 || this.state.value === '') {
+            return;
+        }
+        event.preventDefault();
+        todoStore.addTodo(this.state.value);
+        this.setState({
+            value: ''
+        })
+    };
 
-  getCount = () => {
-    return todoStore.count;
-  }
+    getCount = () => {
+        return todoStore.count;
+    };
 
   render() {
     return (
@@ -29,7 +29,7 @@ class TodoEntry extends Component {
           value={this.state.value}
           onChange={event =>this.setState({value: event.target.value})}
           onKeyDown={
-            event => this.handleKeyDonw(event)
+            event => this.handleKeyDown(event)
           }
           type="text"
           className="new-todo"
